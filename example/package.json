@@ -12,7 +12,7 @@
     "@emotion/styled": "^11.14.1",
     "@mui/icons-material": "^6.0.0",
     "@mui/material": "^6.0.0",
-    "muiTheme": "file:..",
+    "@grantler-instruments/muiTheme": "file:..",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

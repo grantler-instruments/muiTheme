@@ -4,16 +4,22 @@ Reusable MUI (Material UI) themes: dark (muted rose-gold, dusty mauve, warm char
 
 ## Install
 
-**From GitHub:**
+**From npm (recommended):**
 
 ```bash
-npm install git+ssh://git@github.com:grantler-instruments/muiTheme.git @mui/material @emotion/react @emotion/styled
+npm install @grantler-instruments/muiTheme @mui/material @emotion/react @emotion/styled
 ```
 
-Or with HTTPS:
+**From GitHub (same scoped package name, use any of these):**
 
 ```bash
 npm install github:grantler-instruments/muiTheme @mui/material @emotion/react @emotion/styled
+```
+
+Or with SSH:
+
+```bash
+npm install git+ssh://git@github.com:grantler-instruments/muiTheme.git @mui/material @emotion/react @emotion/styled
 ```
 
 Your app must also have `@mui/material`, `@emotion/react`, and `@emotion/styled` installed (they are peer dependencies). If you only add muiTheme, install them:
@@ -28,14 +34,14 @@ npm install @mui/material @emotion/react @emotion/styled
 npm install https://github.com/grantler-instruments/muiTheme/archive/refs/heads/main.tar.gz
 ```
 
-(Use `main` or your branch name in the URL.)
+(Use `main` or your branch name in the URL.) In all cases you still import from `@grantler-instruments/muiTheme`.
 
 ## Usage
 
 ```tsx
 import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
-import { darkTheme, lightTheme } from "muiTheme";
+import { darkTheme, lightTheme } from "@grantler-instruments/muiTheme";
 
 // Dark theme
 <ThemeProvider theme={darkTheme}>

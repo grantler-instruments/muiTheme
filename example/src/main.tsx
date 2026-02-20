@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import { darkTheme, lightTheme } from "muiTheme";
+import { darkTheme, lightTheme } from "@grantler-instruments/muiTheme";
 import App from "./App";
 
 function Example() {

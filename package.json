@@ -1,5 +1,5 @@
 {
-  "name": "muiTheme",
+  "name": "@grantler-instruments/muiTheme",
   "version": "1.0.0",
   "description": "Reusable MUI dark and light themes (muted rose-gold, dusty mauve, warm charcoal)",
   "main": "dist/index.js",
