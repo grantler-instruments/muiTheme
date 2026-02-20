@@ -1,4 +1,6 @@
-import { Button, FormControlLabel, Paper, Switch, Typography } from "@mui/material";
+import { useState } from "react";
+import { Box, Button, FormControlLabel, Paper, Switch, Typography } from "@mui/material";
+import { Knob, WorkInProgressBanner } from "@grantler-instruments/muiTheme";
 
 type AppProps = {
   mode: "dark" | "light";
@@ -6,8 +8,12 @@ type AppProps = {
 };
 
 export default function App({ mode, onModeChange }: AppProps) {
+  const [volume, setVolume] = useState(70);
+  const [gain, setGain] = useState(50);
+
   return (
     <>
+      <WorkInProgressBanner />
       <FormControlLabel
         control={
           <Switch
@@ -32,6 +38,24 @@ export default function App({ mode, onModeChange }: AppProps) {
         <Button variant="contained" color="secondary" sx={{ ml: 1 }}>
           Secondary
         </Button>
+        <Box sx={{ display: "flex", gap: 3, alignItems: "flex-end", mt: 3 }}>
+          <Knob
+            value={volume}
+            onChange={setVolume}
+            min={0}
+            max={100}
+            label="Volume"
+            color="primary"
+          />
+          <Knob
+            value={gain}
+            onChange={setGain}
+            min={0}
+            max={100}
+            label="Gain"
+            color="secondary"
+          />
+        </Box>
       </Paper>
     </>
   );
