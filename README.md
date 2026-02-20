@@ -16,7 +16,19 @@ Or with HTTPS:
 npm install github:grantler-instruments/muiTheme @mui/material @emotion/react @emotion/styled
 ```
 
-Your app must have `@mui/material` (and typically `@emotion/react` / `@emotion/styled`) installed; this package lists MUI as a peer dependency.
+Your app must also have `@mui/material`, `@emotion/react`, and `@emotion/styled` installed (they are peer dependencies). If you only add muiTheme, install them:
+
+```bash
+npm install @mui/material @emotion/react @emotion/styled
+```
+
+**If you see `Operation not permitted` on `.git/hooks/`** (e.g. in Cursor’s sandbox): run `npm install` in a normal terminal, or install from a tarball so npm doesn’t clone via git:
+
+```bash
+npm install https://github.com/grantler-instruments/muiTheme/archive/refs/heads/main.tar.gz
+```
+
+(Use `main` or your branch name in the URL.)
 
 ## Usage
 
