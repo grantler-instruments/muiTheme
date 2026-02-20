@@ -1,0 +1,41 @@
+{
+  "name": "muiTheme",
+  "version": "1.0.0",
+  "description": "Reusable MUI dark and light themes (muted rose-gold, dusty mauve, warm charcoal)",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@mui/material": "^5.0.0 || ^6.0.0"
+  },
+  "devDependencies": {
+    "@mui/material": "^6.0.0",
+    "@types/react": "^18.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "mui",
+    "material-ui",
+    "theme",
+    "react"
+  ],
+  "license": "MIT"
+}
